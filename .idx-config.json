@@ -1,0 +1,8 @@
+{
+    "type": "web",
+    "startCommand": "npx live-server .",
+    "features": {
+      "firebase": true
+    }
+  }
+  
