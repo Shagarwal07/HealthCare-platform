@@ -126,3 +126,125 @@ input[type="text"] {
     font-size: 16px;
     color: #555;
 }
+
+#chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  #chat-bubble {
+    width: 60px;
+    height: 60px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .chat-box {
+    display: none;
+    flex-direction: column;
+    width: 320px;
+    height: 420px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    overflow: hidden;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .chat-header {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+  
+  .message {
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 20px;
+    max-width: 80%;
+    display: inline-block;
+  }
+  
+  .message.user {
+    background-color: #e6f0ff;
+    text-align: right;
+    margin-left: auto;
+  }
+  
+  .message.bot {
+    background-color: #f0f0f0;
+    text-align: left;
+    margin-right: auto;
+  }
+  
+  .input-container {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  
+  .input-container input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .input-container button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+
+  .chat-header {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chat-header .back-btn {
+    position: absolute;
+    left: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  

@@ -57,6 +57,23 @@
             <p id="emitraMessage">Searching for nearby eMitra centers...</p>
             <!-- Later integrate with geolocation API to fetch eMitra centers -->
         </div>
+        <div id="chat-widget">
+            <div id="chat-bubble" onclick="toggleChat()">🧠</div>
+            <div class="chat-box" id="chatBox">
+                <div class="chat-header">
+                    <button class="back-btn" onclick="toggleChat()">←</button>
+                    <span>🧠 Virtual Assistant</span>
+                  </div>
+                  
+
+              <div class="messages" id="chatMessages"></div>
+              <div class="input-container">
+                <input type="text" id="userInput" placeholder="Type a message..." />
+                <button onclick="sendMessage()">Send</button>
+              </div>
+            </div>
+          </div>
+          
     </div>
 
     <script type="module">
@@ -144,6 +161,58 @@
         // Simulated Nearby eMitra Centers (Replace with actual geolocation or API)
         document.getElementById("emitraMessage").innerText = "Found 3 nearby eMitra centers!";
     </script>
+
+//script for ChatBot
+<script>
+    const chatBox = document.getElementById("chatBox");
+    const chatBubble = document.getElementById("chat-bubble");
+    const chat = document.getElementById("chatMessages");
+  
+    const demoMessages = [
+      { sender: "bot", text: "Hello! 👋 Need help with something?" },
+      { sender: "bot", text: "Try asking: 'What can you do?'" }
+    ];
+  
+    function toggleChat() {
+      const isVisible = chatBox.style.display === "flex";
+  
+      chatBox.style.display = isVisible ? "none" : "flex";
+      chatBubble.style.display = isVisible ? "flex" : "none";
+  
+      // Only load demo messages once
+      if (!isVisible && chat.childElementCount === 0) {
+        demoMessages.forEach(msg => addMessage(msg.sender, msg.text));
+      }
+    }
+  
+    function addMessage(sender, text) {
+      const div = document.createElement("div");
+      div.classList.add("message", sender);
+      div.textContent = text;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+  
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const message = input.value.trim();
+      if (!message) return;
+  
+      addMessage("user", message);
+      input.value = "";
+  
+      fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      })
+      .then(res => res.json())
+      .then(data => {
+        addMessage("bot", data.reply);
+      });
+    }
+  </script>
+  
 </body>
 
 </html>
