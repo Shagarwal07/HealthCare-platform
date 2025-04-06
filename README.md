@@ -3,7 +3,15 @@ Healthcare-focused platform designed to enhance the integrity of healthcare docu
 
 ## Project Structure
 
-/healthcare-platform ├── index.html # Main login page ├── README.md # Project documentation └── assets/ # (optional) images, styles,
+HealthCare-platform/
+│
+├── index.html
+├── README.md
+├── .gitignore
+├── .idx-config.json  ← (this is the file you’ll add)
+└── assets/
+    └── style.css
+
 
 
 ## Getting Started
