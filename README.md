@@ -15,7 +15,7 @@ Healthcare-focused platform designed to enhance the integrity of healthcare docu
 
 ### Running the Application
 1. Clone the repo:
-2. Open index.html in a browser
+2. Open file in a browser
 3. Update the Firebase config inside the script
 
 ## Features
