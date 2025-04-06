@@ -15,6 +15,7 @@ HealthCare-platform/
 
 
 ## Getting Started
+“This project was built and tested using Google Project IDX for a fully cloud-native, collaborative development workflow.”
 
 ### Prerequisites
 - A web browser (Chrome, Firefox, etc.)
