@@ -1,22 +1,9 @@
 # HealthCare-platform
 Healthcare-focused platform designed to enhance the integrity of healthcare documentation and empower individuals through personalized support. The platform analyzes user information—such as ABHA card details—to detect discrepancies or outdated data, and guides users on what needs to be updated.
 
-# Interactive Quiz App
-
-## Overview
-The Interactive Quiz App is a web-based application designed to test users' knowledge across various topics. Users can compete for the top spot on the leaderboard by answering questions quickly and accurately.
-
 ## Project Structure
 
-Interactive-Quiz-App
-├── css
-│   └── styles.css          # Styles for the Interactive Quiz App
-├── js
-│   ├── quiz-data.js        # Data for quiz questions and answers
-│   ├── quiz.js             # Main logic for quiz functionality
-│   └── leaderboard.js       # Manages leaderboard functionality
-├── index.html              # Main HTML file for the application
-└── README.md               # Documentation for the project
+/healthcare-platform ├── index.html # Main login page ├── README.md # Project documentation └── assets/ # (optional) images, styles,
 
 
 ## Getting Started
@@ -24,17 +11,32 @@ Interactive-Quiz-App
 ### Prerequisites
 - A web browser (Chrome, Firefox, etc.)
 - Basic knowledge of HTML, CSS, and JavaScript
-
+- Firebase Authentication 
 
 ### Running the Application
-1. Open index.html in your web browser.
-2. Click on the "Start Quiz" button to begin the quiz.
-3. Follow the prompts to answer questions and view your score.
+1. Clone the repo:
+2. Open index.html in a browser
+3. Update the Firebase config inside the script
 
 ## Features
-- Challenge your knowledge with various topics.
-- Time-based scoring to encourage quick responses.
-- Compete on the leaderboard to see how you rank against other players.
+- Firebase Authentication integration
+- Google Sign-In support
+- Clean, responsive UI
+
+## Technologies Used
+
+- HTML5, CSS3, JavaScript
+- Firebase (Auth)
+
+## Firebase Setup
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. Enable Authentication:
+   - Email/Password
+   - Google Sign-In
+4. Add your domain to **Authorized Domains**
+5. Copy your Firebase config and replace in your script:
 
 ## Contributing
 If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
