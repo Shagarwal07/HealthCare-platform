@@ -8,7 +8,7 @@ HealthCare-platform/
 ├── index.html
 ├── README.md
 ├── .gitignore
-├── .idx-config.json  ← (this is the file you’ll add)
+├── .idx-config.json 
 └── assets/
     └── style.css
 
